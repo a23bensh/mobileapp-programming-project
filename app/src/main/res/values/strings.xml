@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Project</string>
+    <string name="action_external_web">External</string>
+    <string name="action_internal_web">Internal</string>
 </resources>
