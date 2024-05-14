@@ -8,26 +8,26 @@ import java.util.Arrays;
 public class Metal {
 
     private String name;
-    private String location;
-    private int height;
+    private String Category;
+    private int Cost;
 
     public Metal ()
     {
         name="Saknar namn";
-        location="Saknar plats";
-        height=-1;
+        Category="Saknar category";
+        Cost=3;
     }
 
     public Metal (String n, String l, int h)
     {
         name=n;
-        location=l;
-        height=h;
+        Category=l;
+        Cost=h;
     }
 
     public String info(){
         String tmp= new String();
-        tmp+=name+" är i "+location+" och är "+height+"m hög";
+        tmp+=name+" är i "+Category+" och är "+Cost+"m hög";
         return tmp;
     }
 
@@ -44,6 +44,8 @@ public class Metal {
     @Override
     @NonNull
     public String toString() {
-        return name;
+
+        return name+" är i albumet: "+Category+" och kostar: "+Cost+"kr";
+
     }
 }
