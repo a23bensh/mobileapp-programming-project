@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Project</string>
-    <string name="action_external_web">External</string>
-    <string name="action_internal_web">Internal</string>
+    <string name="app_name">Dio - Holy Diver</string>
+    <string name="action_external_web">About</string>
+    <string name="action_internal_web">Album</string>
 </resources>
