@@ -1,5 +1,6 @@
 package com.example.project;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -10,7 +11,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -38,7 +38,8 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
 
     WebView myWebView;
     public void showExternalWebPage(){
-        myWebView.loadUrl("file:///android_res/layout/activity_main.xml");
+        Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+        startActivity(intent);
     }
 
     public void showInternalWebPage(){
@@ -54,7 +55,7 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         myWebView = findViewById(R.id.my_webview);
         myWebView.setWebViewClient(new WebViewClient());
         myWebView.getSettings().setJavaScriptEnabled(true);
-        myWebView.loadUrl("file:///android_res/layout/activity_main.xml");
+        myWebView.loadUrl("file:///android_asset/about.html");
 
 
         gson = new Gson();

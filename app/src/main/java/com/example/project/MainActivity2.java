@@ -15,24 +15,23 @@ public class MainActivity2 extends AppCompatActivity {
     private WebView myWebView;
 
     public void showExternalWebPage(){
-        Intent intent=new Intent(MainActivity2.this, MainActivity.class);
-        startActivity(intent);
+        myWebView.loadUrl("file:///android_asset/about.html");
     }
 
     public void showInternalWebPage(){
-        myWebView.loadUrl("file:///android_res/layout/activity_main.xml");
+        Intent intent = new Intent(MainActivity2.this, MainActivity.class);
+        startActivity(intent);
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-        Toolbar toolbar = findViewById(R.id.toolbar1);
-        setSupportActionBar(toolbar);
+        // Remove the following line to fix the issue
+        // setSupportActionBar(toolbar);
         myWebView = findViewById(R.id.my_webview1);
         myWebView.setWebViewClient(new WebViewClient());
         myWebView.getSettings().setJavaScriptEnabled(true);
-
         myWebView.loadUrl("file:///android_asset/about.html");
     }
 
