@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         new JsonFile(this, this).execute(JSON_FILE);
 
         for(Metal m : MetalArraylist){
-            RecyclerViewItems.add(new RecyclerViewItem(m.getName()));
+            RecyclerViewItems.add(new RecyclerViewItem(m.getName(), m.getCategory(),m.getCost()));
         }
 
 

@@ -2,13 +2,16 @@ package com.example.project;
 
 import androidx.annotation.NonNull;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Metal {
-
     private String name;
+    @SerializedName("category")
     private String Category;
+    @SerializedName("cost")
     private int Cost;
 
     public Metal ()
@@ -24,13 +27,7 @@ public class Metal {
         Category=l;
         Cost=h;
     }
-
-    public String info(){
-        String tmp= new String();
-        tmp+=name+" är i "+Category+" och är "+Cost+"m hög";
-        return tmp;
-    }
-
+  public Metal (String name) {this.name = name;}
     public void setName(String n)
     {
         name=n;
@@ -39,6 +36,14 @@ public class Metal {
     public String getName()
     {
         return name;
+    }
+
+    public String getCategory() {
+        return Category;
+    }
+
+    public int getCost() {
+        return Cost;
     }
 
     @Override
